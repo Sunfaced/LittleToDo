@@ -56,10 +56,7 @@ function addTask(event){
 
 
     checkEmptyList()
-    // if(tasksList.children.length > 1){
-    //     emptyList.classList.add('none')  //если в списке элементов больше одного элиента добавляем класс со свойством ноун
-    // } 
-    // saveHTMLtoLs() сохранение всей разметки (хуевый способ)
+
     saveToLocalStorage()
 }
 
@@ -121,7 +118,7 @@ function doneTask(event){
         const taskTitle = parentNode.querySelector('span')   //Хуя
         taskTitle.classList.toggle('task-title--done')   //Хуя 2
     }
-    // saveHTMLtoLs() сохранение всей разметки (хуевый способ)
+
 }
 
 function checkEmptyList(){
@@ -149,37 +146,24 @@ function renderTask(task){
     const taskHTML = `<li id='${task.id}' class="list-group">
     <span class='${cssClass}'>${task.text}</span>
     <button type='button' class="yes" alt='Yes'>
-        <img data-action="done"  class = 'yesNo' src="/img/yes.svg" alt="Yes">
+        <img data-action="done"  class= 'yesNo' src="/img/yes.svg" alt="Yes">
     </button>
     <button type='button'  class="no" alt='No'>
-        <img data-action="delete" class = 'yesNo' src="/img/no.svg" alt="No">
+        <img data-action="delete" class= 'yesNo' src="/img/no.svg" alt="No">
     </button>
     <hr>
 </li>`
 
     //Теперь добавим новую разметку, которую выше сформировал
      
-        tasksList.insertAdjacentHTML('beforeend', taskHTML)    //Прочитать про метод. Первый параметр куда добавлем(в конец), второй какую переменную
+        tasksList.insertAdjacentHTML('beforeend', taskHTML)    
+        //Прочитать про метод. Первый параметр куда добавлем(в конец), 
+        // второй какую переменную
 }
 
 
 
 
-
-
-
-
-
-//localStorage.setItem('name', 'Alex') - ключ значение 
-//localStorage.getItem('name') - передаю ключ чтобы получить значение
-
-// if(localStorage.getItem('tasksHTML')){
-//     tasksList.innerHTML = localStorage.getItem('tasksHTML')
-// }    сохранение всей разметки (хуевый способ)
-
-// function saveHTMLtoLs(){
-//     localStorage.setItem('tasksHTML', tasksList.innerHTML)
-// }  сохранение всей разметки (хуевый способ)
 
 
 

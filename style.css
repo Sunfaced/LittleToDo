@@ -3,7 +3,7 @@ html{
 }
 
 body{
-    max-width: 1200px;
+
     margin: 0 auto;
     text-align: center;
     color: #000;
@@ -12,6 +12,7 @@ body{
     line-height: 1.5;
     font-family: 'Open Sans', sans-serif;
     background-color: gray;
+    max-width: 1200px;
 }
 
 .workSpace{
@@ -27,6 +28,7 @@ ul{
 li{
     list-style: none;
     margin-top: 10px;
+    
 }
 
 
@@ -116,4 +118,26 @@ input:focus:-ms-input-placeholder{
 .yesNo{
     width: 20px;
     height: 20px;
+}
+
+@media (max-width: 1222px){
+    .workSpace{
+        max-width: 480px;
+    }
+    
+    #taskInput{
+        width: 200px;
+    }
+}
+
+@media (max-width: 991px){
+
+}
+
+@media (max-width: 640px){
+
+}
+
+@media (max-width: 460px) {
+
 }
