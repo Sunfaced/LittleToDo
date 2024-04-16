@@ -4,6 +4,7 @@ const taskInput = document.querySelector('#taskInput') //инпут
 const tasksList = document.querySelector('#tasksList') // юэлька
 const emptyList = document.querySelector('#emptyList') //лишка, в которой написано что задач нет
 
+
 let tasks = []
 
 if(localStorage.getItem('tasks')){
@@ -12,12 +13,14 @@ if(localStorage.getItem('tasks')){
 }
 
 
-
-
 checkEmptyList()
+
+let timeAddDelTask = 
+
 
 //Добавление задачи
 form.addEventListener('submit', addTask)
+
 
 //Удаление задачи
 tasksList.addEventListener('click', deleteTask)
@@ -144,11 +147,15 @@ function renderTask(task){
 
     //Разметка лишек для добавления задач
     const taskHTML = `<li id='${task.id}' class="list-group">
-                        <span class='${cssClass}'>${task.text}</span>
-                        <button type='button' data-action="done" class="yes" alt='Yes'>Yes</button>
-                        <button type='button' data-action="delete" class="no" alt='No'>No</button>
-                        <hr>
-                    </li>`
+    <span class='${cssClass}'>${task.text}</span>
+    <button type='button' class="yes" alt='Yes'>
+        <img data-action="done"  class = 'yesNo' src="/img/yes.svg" alt="Yes">
+    </button>
+    <button type='button'  class="no" alt='No'>
+        <img data-action="delete" class = 'yesNo' src="/img/no.svg" alt="No">
+    </button>
+    <hr>
+</li>`
 
     //Теперь добавим новую разметку, которую выше сформировал
      
