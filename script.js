@@ -15,8 +15,6 @@ if(localStorage.getItem('tasks')){
 
 checkEmptyList()
 
-let timeAddDelTask = 
-
 
 //Добавление задачи
 form.addEventListener('submit', addTask)
